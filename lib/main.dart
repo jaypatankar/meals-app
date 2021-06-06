@@ -23,10 +23,13 @@ class MyApp extends StatelessWidget {
                   fontSize: 20,
                   fontFamily: 'RobotoCondensed',
                   fontWeight: FontWeight.bold))),
-      home: CategoriesScreen(),
+      // home: CategoriesScreen(),
+      initialRoute: '/',
       routes: {
         // '/categories' :your-page.com/categories
-        '/category-meals': (ctx) => CategoryMealsScreen()
+        '/': (ctx) => CategoriesScreen(),
+        // '/category-meals': (ctx) => CategoryMealsScreen()
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
       },
     );
   }
